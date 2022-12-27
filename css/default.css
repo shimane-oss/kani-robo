@@ -1,0 +1,59 @@
+body{
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1,h2{
+  margin: 1em 0 ;
+  font-weight: 700;
+}
+
+header {
+  background-color: #F4371D;
+  overflow: hidden
+}
+
+header .inner {
+	max-width: 600px;
+	margin: 0 auto;
+  padding:0 1em;
+  color: #FFF;
+}
+
+nav {
+  background-color: black;
+}
+
+main {
+  margin: auto;
+  padding:2em;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(44, 41, 41);
+  overflow: hidden
+}
+
+footer .inner {
+	width: 380px;
+	max-width: 100%;
+	margin: 0 auto;
+  padding:2em 1em;
+  color: #FFF;
+}
+
+footer .inner ul{
+  list-style: none;
+  line-height: 3;
+  padding-left: 0;
+}
+
+footer a {
+  color: #FFF;
+}
+
+
+
