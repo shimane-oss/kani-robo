@@ -5,9 +5,22 @@ body{
   font-family: sans-serif;
 }
 
+.content{
+	overflow: hidden;
+}
+
 h1,h2{
   margin: 1em 0 ;
   font-weight: 700;
+}
+
+h3{
+  margin: 1em 0 ;
+  font-weight: 600;
+}
+
+img {
+  border-radius: 5px;
 }
 
 header {
@@ -22,8 +35,16 @@ header .inner {
 
 main {
   margin: auto;
-  padding:2em;
+  padding:2em 2em 0 2em;
   text-align: center;
+}
+
+.section1{
+  background-color: #EAEAEA;
+  background-size: auto 100%;
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+  padding:2em;
 }
 
 footer {
