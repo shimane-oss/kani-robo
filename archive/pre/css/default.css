@@ -1,0 +1,74 @@
+body{
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.content{
+	overflow: hidden;
+}
+
+h1,h2{
+  margin: 1em 0 ;
+  font-weight: 700;
+}
+
+h3{
+  margin: 1em 0 ;
+  font-weight: 600;
+}
+
+img {
+  border-radius: 5px;
+}
+
+header {
+  background-image: url(/kani-robo/images/bg-image@2x.jpg);
+  background-position: left center; 
+}
+
+header .inner {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+main {
+  margin: auto;
+  padding:2em 2em 0 2em;
+  text-align: center;
+}
+
+.section1{
+  background-color: #EAEAEA;
+  background-size: auto 100%;
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+  padding:2em;
+}
+
+footer {
+  background-color: rgb(44, 41, 41);
+  overflow: hidden
+}
+
+footer .inner {
+	width: 380px;
+	max-width: 100%;
+	margin: 0 auto;
+  padding:2em 1em;
+  color: #FFF;
+}
+
+footer .inner ul{
+  list-style: none;
+  line-height: 2;
+  padding-left: 0;
+}
+
+footer a {
+  color: #FFF;
+}
+
+
+
