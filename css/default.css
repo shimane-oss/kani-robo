@@ -19,6 +19,12 @@ h3{
   font-weight: 600;
 }
 
+h4{
+  margin: 1em 0 ;
+  font-weight: 600;
+  font-size: medium;
+}
+
 img {
   border-radius: 5px;
 }
@@ -45,6 +51,31 @@ main {
 	margin: 0 calc(50% - 50vw);
 	width: 100vw;
   padding:2em;
+}
+
+.section{
+  background-color: #FFF;
+  background-size: auto 100%;
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+  padding:2em;
+}
+
+p{
+  padding: 0.5em 2em;
+  width: 700px;
+  min-width: 360px;
+  text-align: justify;
+  margin: auto;
+  line-height: 160%;
+}
+
+p.center{
+  text-align: center;
+}
+
+p.left{
+  text-align: left;
 }
 
 footer {
