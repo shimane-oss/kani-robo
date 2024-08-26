@@ -101,5 +101,11 @@ footer a {
   color: #FFF;
 }
 
-
+table {
+  margin: 0 auto; /* 左右のマージンを自動に設定して中央寄せ */
+  border-collapse: collapse;
+}
+.left-align {
+  text-align: left; /* このクラスが適用されたセルだけ左寄せ */
+}
 
