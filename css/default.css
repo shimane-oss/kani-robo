@@ -64,7 +64,7 @@ main {
 p{
   padding: 0.5em 2em;
   width: 700px;
-  min-width: 360px;
+/*  min-width: 360px; */
   text-align: justify;
   margin: auto;
   line-height: 160%;
