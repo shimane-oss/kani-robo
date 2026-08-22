@@ -20,30 +20,31 @@ body,
    幅の制限(画面の約2/3)を解除できるが、そのままだとワイドモニタで
    1行が長くなりすぎて読みにくいため、上限を設けて広げすぎないようにする。 */
 .container-fluid[role="main"] {
-  max-width: 1200px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* 日本語の見出しが単語の途中(文字と文字の間)で改行されないようにする。
-   Beautiful Jekyllは画面幅1200px以上でページ見出しのフォントサイズを
-   50px→80pxに拡大するため、タイトル文字列がコンテナ幅を超えて
-   任意の文字間で改行されてしまう。ここでは1200px以上でのフォント拡大を
-   打ち消しつつ、念のため単語(文字列)途中では改行しないようにする。 */
+   Beautiful Jekyllは見出しのフォントサイズを固定(50px、画面幅1200px以上では80px)
+   にしているため、スマホなど狭い画面では文字列がコンテナ幅を超えてしまい、
+   任意の文字間で改行が入ってしまう。
+   font-sizeをclamp()で画面幅に応じて滑らかに縮小させることで、
+   狭い画面でも1行に収まりやすくする(1200px以上での拡大も打ち消される)。
+   それでも収まらない場合の保険として、単語(文字列)途中では改行しない
+   (word-break: keep-all)。 */
 .intro-header .page-heading h1,
 .intro-header .post-heading h1 {
-  white-space: nowrap;
   word-break: keep-all;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
 }
 
-@media (min-width: 1200px) {
-  .intro-header .page-heading h1 {
-    font-size: 3.125rem;
-  }
-  .intro-header .post-heading h1 {
-    font-size: 2.1875rem;
-  }
+.intro-header .page-heading h1 {
+  font-size: clamp(1.75rem, 5vw + 1rem, 3.125rem);
+}
+
+.intro-header .post-heading h1 {
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.1875rem);
 }
 
 .sponsor-grid {
@@ -113,12 +114,14 @@ footer .footer-custom-content a {
   width: auto;
 }
 
-/* full-width: true のページはコンテナ自体は中央寄せだが、内部の表(table)は
-   ブラウザの初期値により左端に詰まって表示され、右側だけ大きな余白ができて
-   左寄りに見えてしまう。表を内容量に応じた幅のまま中央寄せする。 */
-.container-fluid[role="main"] table {
-  margin-left: auto;
-  margin-right: auto;
+/* Markdownの表(table)は列数が多いとスマホ幅に収まらず、ページ全体が
+   横にはみ出す原因になる。表自体をブロック化して横スクロールさせることで
+   ページ全体のレイアウトは崩さないようにする。 */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .info-box {
