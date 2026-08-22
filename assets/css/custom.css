@@ -113,6 +113,14 @@ footer .footer-custom-content a {
   width: auto;
 }
 
+/* full-width: true のページはコンテナ自体は中央寄せだが、内部の表(table)は
+   ブラウザの初期値により左端に詰まって表示され、右側だけ大きな余白ができて
+   左寄りに見えてしまう。表を内容量に応じた幅のまま中央寄せする。 */
+.container-fluid[role="main"] table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .info-box {
   max-width: 600px;
   width: 90%;
