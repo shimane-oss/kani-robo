@@ -1,0 +1,102 @@
+###########################################################
+### kani-robo-web (Matz葉がにロボコン公式サイト)
+### Beautiful Jekyll プロトタイプ設定
+###########################################################
+
+theme: beautiful-jekyll-theme
+
+title: Matz葉がにロボコン
+author: しまねOSS協議会
+
+lang: ja
+language: ja
+timezone: "Asia/Tokyo"
+
+url: "https://www.shimane-oss.org"
+baseurl: "/kani-robo"
+
+navbar-links:
+  ホーム: "/"
+  新着情報: "news/"
+  ルールについて: "rule/"
+  講習会: "seminar/"
+  スタッフ募集: "staff/"
+  スポンサー募集: "cfs/"
+  過去の大会:
+    - 第3回: "archives/3rd/"
+    - 第2回: "archives/2nd/"
+    - 第1回: "archives/1st/"
+    - プレ大会: "archives/pre/"
+
+avatar: "/images/apple-touch-icon-180x180.png"
+round-avatar: true
+
+title-on-all-pages: true
+excerpt_length: 60
+feed_show_excerpt: true
+feed_show_tags: false
+post_search: true
+
+date_format: "%Y年%-m月%-d日"
+
+# ホームページ(index.md)の新着情報欄に表示する件数。
+# 変更した場合は jekyll serve の再起動が必要(_config.ymlの変更のため)。
+home-news-count: 5
+
+# かにをイメージした配色
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#C0392B"
+hover-col: "#8E2A20"
+navbar-col: "#C0392B"
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#8E2A20"
+footer-col: "#2C2929"
+footer-text-col: "#DDDDDD"
+footer-link-col: "#FFFFFF"
+footer-hover-col: "#E0796E"
+
+site-css:
+  - "/assets/css/custom.css"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - :num ページ目'
+  sort_field: 'date'
+  sort_reverse: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+      social-share: false
+      footer-extra: ["organizers.html"]
+      head-extra: ["favicon.html"]
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+      footer-extra: ["organizers.html"]
+      head-extra: ["favicon.html"]
+
+# archives/ は静的HTMLのまま(front matterを持たないためJekyllはそのままコピーする)。
+# 明示的な除外設定は不要。
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/

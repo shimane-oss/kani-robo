@@ -1,0 +1,126 @@
+/* kani-robo-web 独自スタイル (Beautiful Jekyllテーマの拡張ポイント) */
+
+/* テーマ標準のbodyフォントは 'Lora', 'Times New Roman', serif で、
+   日本語グリフを持たないため和文はOS標準の明朝体にフォールバックしていた。
+   和文・欧文とも読みやすいゴシック体のシステムフォントスタックに変更する。 */
+body,
+.post-heading .post-meta,
+.post-preview .post-meta {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* site.avatarはOGP画像の予備(フォールバック)としても使うため設定自体は残し、
+   ナビゲーションバー右側のアバター表示のみ非表示にする。 */
+.avatar-container {
+  display: none;
+}
+
+/* full-width: true を指定したページは通常の col-xl-8 offset-xl-2 による
+   幅の制限(画面の約2/3)を解除できるが、そのままだとワイドモニタで
+   1行が長くなりすぎて読みにくいため、上限を設けて広げすぎないようにする。 */
+.container-fluid[role="main"] {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 日本語の見出しが単語の途中(文字と文字の間)で改行されないようにする。
+   Beautiful Jekyllは画面幅1200px以上でページ見出しのフォントサイズを
+   50px→80pxに拡大するため、タイトル文字列がコンテナ幅を超えて
+   任意の文字間で改行されてしまう。ここでは1200px以上でのフォント拡大を
+   打ち消しつつ、念のため単語(文字列)途中では改行しないようにする。 */
+.intro-header .page-heading h1,
+.intro-header .post-heading h1 {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (min-width: 1200px) {
+  .intro-header .page-heading h1 {
+    font-size: 3.125rem;
+  }
+  .intro-header .post-heading h1 {
+    font-size: 2.1875rem;
+  }
+}
+
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+.sponsor-item {
+  width: 180px;
+}
+
+.sponsor-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.photo-grid figure {
+  margin: 0;
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.photo-grid img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.photo-grid figcaption {
+  margin-top: 0.5em;
+}
+
+/* フッター背景(footer-col: #2C2929)が暗いのに対し、footer-extraで追加した
+   本文は通常の本文色(暗い色)を引き継いでしまい読めなくなっていた。
+   footer-text-col/footer-link-colと同じ配色を明示的に指定する。 */
+footer .footer-custom-content {
+  color: #DDDDDD;
+}
+
+footer .footer-custom-content a {
+  color: #FFFFFF;
+}
+
+.footer-banners {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.footer-banners img {
+  max-height: 60px;
+  width: auto;
+}
+
+.info-box {
+  max-width: 600px;
+  width: 90%;
+  margin: 1.5em auto;
+  padding: 1em 1.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
