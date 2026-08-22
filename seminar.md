@@ -1,5 +1,5 @@
 ---
-title: Matz葉がにロボコン講習会
+title: 講習会
 share-description: こども向けプログラミングコンテスト「Matz葉がにロボコン」の講習会のページです。
 share-img: "/images/ogp-seminar.png"
 permalink: /seminar/
