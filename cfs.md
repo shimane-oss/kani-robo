@@ -1,6 +1,5 @@
 ---
 title: スポンサー募集
-subtitle: Matz葉がにロボコン スポンサー募集
 share-description: Matz葉がにロボコンのスポンサー募集ページです。大会をサポートしてくださる企業・団体を募集しています。
 share-img: "/images/ogp@2x.png"
 permalink: /cfs/
