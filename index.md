@@ -48,7 +48,7 @@ Matz葉がにロボコンとは、スモウルビーや軽量Rubyを活用した
 
 かにロボのプログラムを開発するためのプログラミングツール「SmT（シント）」にアクセスするには以下のリンクをクリックしてください。
 
-[https://ceres.epi.it.matsue-ct.ac.jp/smt/](https://ceres.epi.it.matsue-ct.ac.jp/smt/){:.btn .btn-info target="_blank" rel="noopener"}
+[https://mrubyc.gfd-dennou.org/smt/](https://mrubyc.gfd-dennou.org/smt/){:.btn .btn-info target="_blank" rel="noopener"}
 
 ### 資料
 
